@@ -86,6 +86,29 @@
 
 
 
+--------------------------------------------------------------------------------------
+
+--Day 2
+--Group by and oredr BY
+
+--select Gender,Age ,Count(Gender) From EmployeDemographics
+--Group by Gender,Age
+
+--select Gender,Age ,Count(Gender) From EmployeDemographics
+--where Age>31
+--Group by Gender,Age
+
+--select Gender,Count(Gender) as counterGender From EmployeDemographics
+--where Age>5
+--Group by Gender
+--Order by counterGender desc
+
+--select * from EmployeDemographics
+--order by 3 desc,2 desc
+
+
+
+
 
 
 
