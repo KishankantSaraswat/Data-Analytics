@@ -155,6 +155,65 @@
 --On EmployeDemographics.EmployeeID=EmployeeSalary.EmployeeID
 --where JobTitle='salesMan'
 
+--------------------------------------------------------------------------------
+
+
+--Create Table WareHouseEmployee
+--(EmployeeID int,
+--FirstName varchar(50),
+--LastName varchar(50),
+--Age int,
+--Gender varchar(50)
+--)
+
+--Insert into WareHouseEmployee Values
+--(1211,'krishna','sharma',87,'male'),
+--(5211,'krish','sharma',78,'male'),
+--(1011,'alex','sharma',45,'male'),
+--(1241,'james','bond',36,'male')
+
+
+--select * from WareHouseEmployee
+--Full outer Join EmployeDemographics
+--On WareHouseEmployee.EmployeeID=EmployeDemographics.EmployeeID
+
+
+--select * from WareHouseEmployee
+--Union
+--select * from EmployeDemographics
+
+--select * from WareHouseEmployee
+--Union All --its give every row of both table but union give all values of table except duplicate values
+--select * from EmployeDemographics
+--order by EmployeeID
+
+--select EmployeeID,FirstName,Age from EmployeDemographics
+--Union 
+--select EmployeeID,JobTitle,Salary from EmployeeSalary
+
+---------------
+--CASEBASED
+------------------
+
+--SELECT 
+--    FirstName,
+--    LastName,
+--    Age,
+--    CASE
+--When Age Between 21 And 32 then 'young'
+--when Age< 15 then 'baby'
+--        WHEN Age > 33 THEN 'old'
+--        ELSE 'Young'
+--    END AS AgeCategory
+--FROM 
+--    EmployeDemographics
+--ORDER BY 
+--    Age;
+
+
+
+
+
 
 
 
