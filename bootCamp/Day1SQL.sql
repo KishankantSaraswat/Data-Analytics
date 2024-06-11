@@ -108,6 +108,57 @@
 
 
 
+-------------------------------------------------
+--JOINS
+
+--Inner Join Full/Right/Left/outer Joins
+
+--select * from EmployeDemographics
+--Inner Join EmployeeSalary
+--On EmployeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+
+--select * from EmployeDemographics
+--full outer Join EmployeeSalary
+--On EmployeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+
+--select * from EmployeDemographics
+--Left outer Join EmployeeSalary
+--On EmployeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+
+--select * from EmployeDemographics
+--Right outer Join EmployeeSalary
+--On EmployeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+
+--select EmployeeID,FirstName,Age,Salary from EmployeDemographics
+--Inner Join EmployeeSalary
+--On EmployeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+
+
+--this is not good at all 
+
+--select EmployeDemographics.EmployeeID,FirstName,Age,Salary from EmployeDemographics
+--Inner Join EmployeeSalary
+--On EmployeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+
+--q1 find name of employee which got hight salary except kk
+
+--select EmployeDemographics.EmployeeID,FirstName,LastName,Salary from EmployeDemographics
+--Inner Join EmployeeSalary
+--On EmployeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+--where FirstName <> 'kk'
+--order by Salary Desc 
+
+--q2 Average salary for SalesMan
+
+--select Avg(Salary) as salary from EmployeDemographics
+--Inner Join EmployeeSalary
+--On EmployeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+--where JobTitle='salesMan'
+
+
+
+
+
 
 
 
