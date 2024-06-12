@@ -269,6 +269,22 @@
 
 ------Aliasing
 
+--select FirstName + ' ' + LastName as fullName from EmployeDemographics
+
+--select * from EmployeDemographics as a
+--full outer join 
+--EmployeeSalary as b
+--On b.EmployeeID=a.EmployeeID
+--full outer join 
+--WareHouseEmployee as c
+--on c.EmployeeID=a.
+
+
+------------
+--Partition by 
+
+
+
 
 
 
