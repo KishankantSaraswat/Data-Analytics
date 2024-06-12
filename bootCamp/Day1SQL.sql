@@ -210,6 +210,67 @@
 --ORDER BY 
 --    Age;
 
+--Case 2 Salary Raise
+--SELECT ed.FirstName,ed.LastName,es.JobTitle,es.Salary,
+--CASE
+--WHEN es.JobTitle = 'salesman' THEN es.Salary + (es.Salary * 0.10)
+--WHEN es.JobTitle = 'kinar' THEN es.Salary + (es.Salary * 0.025)
+--ELSE es.Salary + (es.Salary * 0.3)
+--END AS NewSalary
+--FROM EmployeDemographics ed
+--FULL OUTER JOIN EmployeeSalary es
+--ON ed.EmployeeID = es.EmployeeID;
+
+
+--Having Clause
+
+--select JobTitle,Count(JobTitle) as c from EmployeDemographics as ed
+--full outer join
+--EmployeeSalary as es
+--ON ed.EmployeeID=es.EmployeeID
+-----where count(JobTitle)>1 ---An aggregate may not appear in the WHERE clause unless it is in a subquery contained in
+-----a HAVING clause or a select list, and the column being aggregated is an outer reference.
+--Group by (JobTitle)
+
+--Having count(JobTitle)>1
+
+
+
+--select JobTitle,Avg(Salary) as c from EmployeDemographics as ed
+--full outer join
+--EmployeeSalary as es
+--ON ed.EmployeeID=es.EmployeeID
+-----where count(JobTitle)>1 ---An aggregate may not appear in the WHERE clause unless it is in a subquery contained in
+-----a HAVING clause or a select list, and the column being aggregated is an outer reference.
+--Group by (JobTitle)
+--Having Avg(Salary)>500000
+--order by Avg(Salary) desc
+
+
+
+-----------------
+
+--updating & deleting 
+
+--select * from EmployeDemographics
+
+--update EmployeDemographics
+--set age=19 , EmployeeID=1032
+--where FirstName='kanishka'
+
+
+--select * from EmployeDemographics
+--update EmployeDemographics
+--set FirstName='Teena',LastName='null',Age=20,Gender='female'
+--where EmployeeID=1002
+
+--Delete from EmployeDemographics where FirstName='vaibhav'
+
+
+------Aliasing
+
+
+
 
 
 
