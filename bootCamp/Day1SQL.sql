@@ -281,7 +281,28 @@
 
 
 ------------
---Partition by 
+--partition By
+
+--select FirstName,LastName,Gender,Salary
+--,Count(Gender) over (partition by Gender) as TotalGender
+--from EmployeDemographics
+--Join
+--EmployeeSalary
+--On EmployeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+
+--select FirstName,LastName,Gender,Salary,Count(Gender) 
+--from EmployeDemographics
+--Join
+--EmployeeSalary
+--On EmployeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+
+--group by FirstName,LastName,Gender,Salary
+
+
+---------------------------------------------
+
+
+--CTEs 
 
 
 
