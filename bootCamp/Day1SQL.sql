@@ -322,3 +322,54 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------
+
+
+--Temp Table
+
+--Create Table #tempTable(
+--EmployeeId int,
+--JobTitle varchar(50),
+--Salary int)
+
+--Insert into #tempTable
+--select * from EmployeeSalary
+
+--select * from #tempTable
+
+--create table #temptable2(
+--JobTitle varchar(50),
+--EmployeePerJob int,
+--AverageAge int,
+--AvgSalary int)
+
+
+--select * from EmployeDemographics
+--Insert into #temptable2
+--Select JobTitle,Count(Jobtitle),Avg(Age),Avg(Salary)
+--from EmployeDemographics as ed
+--Join EmployeeSalary as es
+--on es.EmployeeID=ed.EmployeeID
+--group by JobTitle
+
+
+--select * from #temptable2
+
+
+
+
+
