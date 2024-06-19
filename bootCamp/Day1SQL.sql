@@ -410,6 +410,71 @@ select FirstName,Lower(FirstName) from employeErrors
 select FirstName,Upper(FirstName) from employeErrors
 
 
+_______________________________
+
+
+   -- strores procedures
+
+create procedure test
+as
+select * from EmployeDemographics
+
+exec test
+
+
+create Procedure TempEmployee
+as 
+create table #tempEmployee2(
+JobTitle varchar(50),
+EmployeePerJob int,
+AvgAge int,
+AvgSalary int)
+Insert into #tempEmployee2
+select JobTitle,count(JobTitle),aVG(Age),avg(Salary)
+from EmployeDemographics as emp
+join EmployeeSalary as sal
+On emp.EmployeeID=sal.EmployeeID
+group by JobTitle
+
+select * from #tempEmployee2
+
+exec TempEmployee
+
+exec TempEmployee @JobTitle='salesman'
+
+----------------
+
+USE [Sql tutorial]
+GO
+/****** Object:  StoredProcedure [dbo].[TempEmployee]    Script Date: 19-06-2024 18:46:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER Procedure [dbo].[TempEmployee]
+@JobTitle nvarchar(100)
+as 
+create table #tempEmployee2(
+JobTitle varchar(50),
+EmployeePerJob int,
+AvgAge int,
+AvgSalary int)
+Insert into #tempEmployee2
+select JobTitle,count(JobTitle),aVG(Age),avg(Salary)
+from EmployeDemographics as emp
+join EmployeeSalary as sal
+On emp.EmployeeID=sal.EmployeeID
+where JobTitle=@JobTitle
+group by JobTitle
+
+select * from #tempEmployee2
+
+
+_________________________________________________________________________________________
+
+
+
+
 
 
 
