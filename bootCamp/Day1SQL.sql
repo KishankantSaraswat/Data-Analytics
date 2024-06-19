@@ -473,6 +473,62 @@ select * from #tempEmployee2
 _________________________________________________________________________________________
 
 
+---subqueries(in the sleect , from & where statement)
+
+select * from EmployeeSalary
+
+
+--#subquery in select 
+
+SELECT 
+    EmployeeID, 
+    Salary, 
+    (SELECT AVG(Salary) FROM EmployeeSalary) AS AllAvgSalary
+FROM 
+    EmployeeSalary;
+
+
+--# How to do it with partionBY
+SELECT 
+    EmployeeID, 
+    Salary, 
+    AVG(Salary) over() AS AllAvgSalary
+FROM 
+    EmployeeSalary;
+
+--# why group by does not work
+
+select EmployeeID,Salary,Avg(Salary) as AllAvgSalary
+from EmployeeSalary
+group by EmployeeID,Salary
+order by 1,2
+
+
+----subquery in from 
+SELECT 
+    EmployeeID,
+    AllAvgSalary
+FROM 
+    (SELECT 
+        EmployeeID, 
+        AVG(Salary) OVER () AS AllAvgSalary
+    FROM 
+        EmployeeSalary) a;
+
+
+
+
+---subquery inw where 
+
+SELECT 
+    EmployeeID, 
+    JobTitle, 
+    Salary 
+FROM 
+    EmployeeSalary
+WHERE 
+    EmployeeID IN (SELECT EmployeeID FROM EmployeDemographics WHERE Age > 30);
+
 
 
 
